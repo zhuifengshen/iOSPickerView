@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15F24b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DatePickerSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="NBx-1W-26a">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="484496437.38726598">
+                                    <!--2016-05-09 14:20:37 +0000-->
+                                </date>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fow-MB-aSN">
+                                <rect key="frame" x="279" y="224" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="JQD-nM-vU1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9d3-9h-WOZ">
+                                <rect key="frame" x="270" y="253" width="60" height="30"/>
+                                <state key="normal" title="显示日期"/>
+                                <connections>
+                                    <action selector="onclick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u8H-PJ-en7"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ts7-hy-wOb">
+                                <rect key="frame" x="-7" y="275" width="600" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Zwb-pl-H4K"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Q3a-00-N0e"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNC-Im-SIH">
+                                <rect key="frame" x="279" y="522" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Jp0-62-fsq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mt8-M4-O4i">
+                                <rect key="frame" x="270" y="562" width="60" height="30"/>
+                                <state key="normal" title="选择省市"/>
+                                <connections>
+                                    <action selector="provinceAndCityBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gY9-ok-iBm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fow-MB-aSN" firstAttribute="top" secondItem="NBx-1W-26a" secondAttribute="bottom" constant="8" symbolic="YES" id="93R-Lr-yQP"/>
+                            <constraint firstItem="ts7-hy-wOb" firstAttribute="top" secondItem="fow-MB-aSN" secondAttribute="bottom" constant="30" id="ANJ-EF-AxP"/>
+                            <constraint firstItem="mt8-M4-O4i" firstAttribute="top" secondItem="SNC-Im-SIH" secondAttribute="bottom" constant="19" id="D3R-gv-Dfr"/>
+                            <constraint firstItem="NBx-1W-26a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ehe-vE-HJh"/>
+                            <constraint firstItem="NBx-1W-26a" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="SfY-CE-grY"/>
+                            <constraint firstItem="NBx-1W-26a" firstAttribute="centerX" secondItem="fow-MB-aSN" secondAttribute="centerX" id="VdG-Tp-cIP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ts7-hy-wOb" secondAttribute="trailing" constant="-13" id="WO2-MJ-88q"/>
+                            <constraint firstItem="9d3-9h-WOZ" firstAttribute="leading" secondItem="mt8-M4-O4i" secondAttribute="leading" id="aps-qt-AUC"/>
+                            <constraint firstItem="9d3-9h-WOZ" firstAttribute="centerX" secondItem="fow-MB-aSN" secondAttribute="centerX" id="f6A-qi-Zfz"/>
+                            <constraint firstAttribute="trailing" secondItem="NBx-1W-26a" secondAttribute="trailing" id="oyQ-Rr-mph"/>
+                            <constraint firstItem="fow-MB-aSN" firstAttribute="leading" secondItem="SNC-Im-SIH" secondAttribute="leading" id="pma-u6-lhG"/>
+                            <constraint firstItem="ts7-hy-wOb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-27" id="qYH-lm-JP0"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mt8-M4-O4i" secondAttribute="bottom" constant="8" symbolic="YES" id="sem-He-stx"/>
+                            <constraint firstItem="9d3-9h-WOZ" firstAttribute="top" secondItem="fow-MB-aSN" secondAttribute="bottom" constant="8" symbolic="YES" id="zRM-v4-YnH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="NBx-1W-26a" id="o7I-TL-DKH"/>
+                        <outlet property="label" destination="fow-MB-aSN" id="Zzg-D4-XSX"/>
+                        <outlet property="pickerView" destination="ts7-hy-wOb" id="HFh-Bb-GQg"/>
+                        <outlet property="provinceAndCityLabel" destination="SNC-Im-SIH" id="E7z-cs-F8z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="898" y="487"/>
+        </scene>
+    </scenes>
+</document>
